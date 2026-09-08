@@ -23,25 +23,27 @@ Dados obtidos via [StatsBomb Open Data](https://github.com/statsbomb/open-data) 
 ## Estrutura do repositório
 
 ```
-tcc-xg-model/
+expected-goals-ml/
 ├── data/
 │   ├── raw/                  # Dados brutos da StatsBomb (não versionados)
-│   └── processed/            # Datasets pré-processados
-├── notebooks/                # Jupyter para exploração
-│   ├── 01_coleta.ipynb
-│   ├── 02_features.ipynb
-│   ├── 03_modelos.ipynb
-│   └── 04_analise_shap.ipynb
-├── src/                      # Código organizado
-│   ├── data_loader.py        # Coleta via statsbombpy
-│   ├── features.py           # Engenharia de features
-│   ├── models.py             # Treinamento dos 3 modelos
-│   └── evaluation.py         # Métricas e validação cruzada
-├── dashboard/                # App Streamlit
-│   └── app.py
+│   └── processed/            # Datasets com features (não versionados)
+├── notebooks/                 # Jupyter para exploração
+│   ├── 01_coleta.ipynb        # Coleta e exploração inicial da StatsBomb API
+│   ├── 02_features.ipynb      # Exploração das features geométricas/categóricas
+│   ├── 03_modelos.ipynb       # Treinamento e comparação dos 3 modelos
+│   └── 04_analise_shap.ipynb  # Interpretabilidade (SHAP) do modelo campeão
+├── src/                        # Código organizado
+│   ├── data_loader.py          # Coleta via statsbombpy
+│   ├── features.py             # Engenharia de features
+│   ├── models.py               # Treinamento dos 3 modelos (grid search + K-Fold)
+│   └── evaluation.py           # Avaliação consolidada, IC bootstrap, calibração
+├── dashboard/                  # App Streamlit
+│   └── app.py                  # Simulador de xG + comparação de modelos
 ├── results/
-│   ├── figures/              # Gráficos gerados
-│   └── models/               # Modelos treinados (.pkl)
+│   ├── figures/                     # Curvas de calibração (.png)
+│   ├── models/                      # Modelos treinados (não versionados)
+│   ├── tabela_comparativa_modelos.csv
+│   └── tabela_avaliacao_completa.csv/.tex
 ├── requirements.txt
 └── README.md
 ```
@@ -57,8 +59,8 @@ tcc-xg-model/
 
 ```bash
 # Clone o repositório
-git clone https://github.com/[usuario]/tcc-xg-model.git
-cd tcc-xg-model
+git clone https://github.com/PaulooBarros/expected-goals-ml.git
+cd expected-goals-ml
 
 # Crie um ambiente virtual
 python -m venv venv
@@ -98,12 +100,24 @@ streamlit run dashboard/app.py
 - Log-Loss
 - Brier Score
 
+## Resultados
+
+Tabela completa em [`results/tabela_avaliacao_completa.csv`](results/tabela_avaliacao_completa.csv), gerada por `src/evaluation.py`:
+
+| Modelo | Teste principal (Copa 2022) | Teste externo (Euro 2020) |
+|---|---|---|
+| Regressão Logística | AUC 0,714 | AUC 0,732 |
+| **Random Forest** | **AUC 0,767** | **AUC 0,751** |
+| XGBoost | AUC 0,746 | AUC 0,748 |
+
+O **Random Forest** apresentou o melhor AUC-ROC nos dois cenários de teste (generalização temporal e entre torneios) e foi escolhido como modelo campeão, sendo o modelo integrado ao dashboard e analisado com SHAP em `notebooks/04_analise_shap.ipynb`.
+
 ## Tecnologias
 
 - Python 3.11+
 - statsbombpy, pandas, numpy
 - scikit-learn, xgboost, shap
-- matplotlib, mplsoccer, plotly
+- matplotlib, mplsoccer, seaborn, plotly
 - streamlit
 
 ## Licença
