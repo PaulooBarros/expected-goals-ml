@@ -1,0 +1,46 @@
+# Ambientes virtuais
+venv/
+env/
+.venv/
+.env/
+
+# Dados (não versionar dados brutos e processados)
+data/raw/*.csv
+data/raw/*.json
+data/raw/*.parquet
+data/processed/*.csv
+data/processed/*.parquet
+
+# Modelos treinados (podem ser pesados)
+results/models/*.pkl
+results/models/*.joblib
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Cache do statsbombpy
+.cache/

@@ -1,0 +1,28 @@
+# Coleta de dados
+statsbombpy>=1.14.0
+
+# Manipulação de dados
+pandas>=2.2.0
+numpy>=1.26.0
+
+# Aprendizado de máquina
+scikit-learn>=1.5.0
+xgboost>=2.1.0
+shap>=0.46.0
+
+# Visualização
+matplotlib>=3.9.0
+mplsoccer>=1.4.0
+seaborn>=0.13.0
+plotly>=5.24.0
+
+# Dashboard
+streamlit>=1.39.0
+
+# Jupyter
+jupyter>=1.1.0
+ipykernel>=6.29.0
+
+# Utilitários
+joblib>=1.4.0
+tqdm>=4.66.0
