@@ -149,4 +149,4 @@ O artigo científico do TCC é escrito em LaTeX e está em repositório separado
 
 ---
 
-**Última atualização:** Setembro de 2026.
+**Última atualização:** 08 Setembro de 2026.
