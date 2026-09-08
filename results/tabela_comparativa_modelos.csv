@@ -1,0 +1,10 @@
+modelo,conjunto,auc_roc,log_loss,brier_score
+regressao_logistica,treino_2018_cv,0.7511,0.2529,0.0689
+regressao_logistica,teste_principal_2022,0.7141,0.3265,0.0867
+regressao_logistica,teste_externo_euro2020,0.7315,0.295,0.0798
+random_forest,treino_2018_cv,0.7398,0.2513,0.0687
+random_forest,teste_principal_2022,0.7669,0.2974,0.086
+random_forest,teste_externo_euro2020,0.7508,0.2845,0.0806
+xgboost,treino_2018_cv,0.7134,0.2586,0.0699
+xgboost,teste_principal_2022,0.7464,0.3036,0.087
+xgboost,teste_externo_euro2020,0.7482,0.2847,0.0805

@@ -14,6 +14,7 @@ data/processed/*.parquet
 # Modelos treinados (podem ser pesados)
 results/models/*.pkl
 results/models/*.joblib
+results/models/*.json
 
 # Cache do Python
 __pycache__/
