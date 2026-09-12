@@ -1,0 +1,17 @@
+fase,data,mandante,visitante,gols_mandante,gols_visitante,decidida_penaltis,vencedor_real,xg_mandante,xg_visitante,favorito_pelo_xg,modelo_acertou_vencedor,divergencia_xg_placar
+Round of 16,2022-12-03,Argentina,Australia,2,1,False,Argentina,0.959,0.35,Argentina,True,0.391
+Round of 16,2022-12-03,Netherlands,United States,3,1,False,Netherlands,0.993,1.646,United States,False,2.653
+Round of 16,2022-12-04,England,Senegal,3,0,False,England,0.873,0.834,England,True,2.961
+Round of 16,2022-12-04,France,Poland,3,1,False,France,1.023,0.937,France,True,1.914
+Round of 16,2022-12-05,Japan,Croatia,1,1,True,Croatia,0.828,1.156,Croatia,True,0.328
+Round of 16,2022-12-05,Brazil,South Korea,4,1,False,Brazil,1.705,0.389,Brazil,True,1.684
+Round of 16,2022-12-06,Portugal,Switzerland,6,1,False,Portugal,1.48,0.989,Portugal,True,4.509
+Round of 16,2022-12-06,Morocco,Spain,0,0,True,Morocco,0.637,0.902,Spain,False,0.265
+Quarter-finals,2022-12-09,Netherlands,Argentina,2,2,True,Argentina,0.643,0.852,Argentina,True,0.209
+Quarter-finals,2022-12-09,Croatia,Brazil,1,1,True,Croatia,0.604,1.46,Brazil,False,0.856
+Quarter-finals,2022-12-10,Morocco,Portugal,1,0,False,Morocco,0.735,0.851,Portugal,False,1.116
+Quarter-finals,2022-12-10,England,France,1,2,False,France,0.984,0.862,England,False,1.122
+Semi-finals,2022-12-13,Argentina,Croatia,3,0,False,Argentina,0.871,0.907,Croatia,False,3.036
+Semi-finals,2022-12-14,France,Morocco,2,0,False,France,1.464,1.136,France,True,1.672
+3rd Place Final,2022-12-17,Croatia,Morocco,2,1,False,Croatia,0.656,1.108,Morocco,False,1.451
+Final,2022-12-18,Argentina,France,3,3,True,Argentina,1.799,0.428,Argentina,True,1.371
